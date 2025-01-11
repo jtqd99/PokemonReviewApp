@@ -84,7 +84,7 @@ namespace PokemonReviewApp
                             }
                         }
                     },
-                                    new PokemonOwner()
+                    new PokemonOwner()
                     {
                         Pokemon = new Pokemon()
                         {
@@ -112,6 +112,161 @@ namespace PokemonReviewApp
                             Country = new Country()
                             {
                                 Name = "Millet Town"
+                            }
+                        }
+                    },
+                    new PokemonOwner()
+                    {
+                        Pokemon = new Pokemon()
+                        {
+                            Name = "Charizard",
+                            BirthDate = new DateTime(1903,1,1),
+                            PokemonCategories = new List<PokemonCategory>()
+                            {
+                                new PokemonCategory { Category = new Category() { Name = "Fire"}}
+                            },
+                            Reviews = new List<Review>()
+                            {
+                                new Review { Title="Charizard",Text = "Charizard is the best pokemon, because it is fire", Rating = 5,
+                                Reviewer = new Reviewer(){ FirstName = "John", LastName = "Doe" } },
+                                new Review { Title="Charizard",Text = "Charizard is great at melting ice", Rating = 4,
+                                Reviewer = new Reviewer(){ FirstName = "Jane", LastName = "Doe" } },
+                                new Review { Title="Charizard",Text = "Charizard, Charizard, Charizard", Rating = 2,
+                                Reviewer = new Reviewer(){ FirstName = "Emily", LastName = "Clark" } },
+                            }
+                        },
+                        Owner = new Owner()
+                        {
+                            FirstName = "Brock",
+                            LastName = "Harrison",
+                            Gym = "Pewter Gym",
+                            Country = new Country()
+                            {
+                                Name = "Kanto"
+                            }
+                        }
+                    },
+                    new PokemonOwner()
+                    {
+                        Pokemon = new Pokemon()
+                        {
+                            Name = "Bulbasaur",
+                            BirthDate = new DateTime(1903,1,1),
+                            PokemonCategories = new List<PokemonCategory>()
+                            {
+                                new PokemonCategory { Category = new Category() { Name = "Grass"}}
+                            },
+                            Reviews = new List<Review>()
+                            {
+                                new Review { Title="Bulbasaur",Text = "Bulbasaur is the best pokemon, because it is grass", Rating = 5,
+                                Reviewer = new Reviewer(){ FirstName = "Michael", LastName = "Jordan" } },
+                                new Review { Title="Bulbasaur",Text = "Bulbasaur is great at defeating water types", Rating = 4,
+                                Reviewer = new Reviewer(){ FirstName = "LeBron", LastName = "James" } },
+                                new Review { Title="Bulbasaur",Text = "Bulbasaur, Bulbasaur, Bulbasaur", Rating = 3,
+                                Reviewer = new Reviewer(){ FirstName = "Kobe", LastName = "Bryant" } },
+                            }
+                        },
+                        Owner = new Owner()
+                        {
+                            FirstName = "Misty",
+                            LastName = "Williams",
+                            Gym = "Cerulean Gym",
+                            Country = new Country()
+                            {
+                                Name = "Kanto"
+                            }
+                        }
+                    },
+                    new PokemonOwner()
+                    {
+                        Pokemon = new Pokemon()
+                        {
+                            Name = "Jigglypuff",
+                            BirthDate = new DateTime(1903,1,1),
+                            PokemonCategories = new List<PokemonCategory>()
+                            {
+                                new PokemonCategory { Category = new Category() { Name = "Fairy"}}
+                            },
+                            Reviews = new List<Review>()
+                            {
+                                new Review { Title="Jigglypuff",Text = "Jigglypuff is the best pokemon, because it is fairy", Rating = 5,
+                                Reviewer = new Reviewer(){ FirstName = "Serena", LastName = "Williams" } },
+                                new Review { Title="Jigglypuff",Text = "Jigglypuff is great at putting enemies to sleep", Rating = 4,
+                                Reviewer = new Reviewer(){ FirstName = "Venus", LastName = "Williams" } },
+                                new Review { Title="Jigglypuff",Text = "Jigglypuff, Jigglypuff, Jigglypuff", Rating = 3,
+                                Reviewer = new Reviewer(){ FirstName = "Roger", LastName = "Federer" } },
+                            }
+                        },
+                        Owner = new Owner()
+                        {
+                            FirstName = "Gary",
+                            LastName = "Oak",
+                            Gym = "Viridian Gym",
+                            Country = new Country()
+                            {
+                                Name = "Kanto"
+                            }
+                        }
+                    },
+                    new PokemonOwner()
+                    {
+                        Pokemon = new Pokemon()
+                        {
+                            Name = "Eevee",
+                            BirthDate = new DateTime(1903,1,1),
+                            PokemonCategories = new List<PokemonCategory>()
+                            {
+                                new PokemonCategory { Category = new Category() { Name = "Normal"}}
+                            },
+                            Reviews = new List<Review>()
+                            {
+                                new Review { Title="Eevee",Text = "Eevee is the best pokemon, because it can evolve into many forms", Rating = 5,
+                                Reviewer = new Reviewer(){ FirstName = "Chris", LastName = "Evans" } },
+                                new Review { Title="Eevee",Text = "Eevee is versatile and cute", Rating = 4,
+                                Reviewer = new Reviewer(){ FirstName = "Scarlett", LastName = "Johansson" } },
+                                new Review { Title="Eevee",Text = "Eevee, Eevee, Eevee", Rating = 3,
+                                Reviewer = new Reviewer(){ FirstName = "Robert", LastName = "Downey Jr." } },
+                            }
+                        },
+                        Owner = new Owner()
+                        {
+                            FirstName = "Lance",
+                            LastName = "Dragon",
+                            Gym = "Elite Four",
+                            Country = new Country()
+                            {
+                                Name = "Johto"
+                            }
+                        }
+                    },
+                    new PokemonOwner()
+                    {
+                        Pokemon = new Pokemon()
+                        {
+                            Name = "Gengar",
+                            BirthDate = new DateTime(1903,1,1),
+                            PokemonCategories = new List<PokemonCategory>()
+                            {
+                                new PokemonCategory { Category = new Category() { Name = "Ghost"}}
+                            },
+                            Reviews = new List<Review>()
+                            {
+                                new Review { Title="Gengar",Text = "Gengar is the best pokemon, because it is ghost", Rating = 5,
+                                Reviewer = new Reviewer(){ FirstName = "Tom", LastName = "Holland" } },
+                                new Review { Title="Gengar",Text = "Gengar is spooky and powerful", Rating = 4,
+                                Reviewer = new Reviewer(){ FirstName = "Zendaya", LastName = "Coleman" } },
+                                new Review { Title="Gengar",Text = "Gengar, Gengar, Gengar", Rating = 3,
+                                Reviewer = new Reviewer(){ FirstName = "Benedict", LastName = "Cumberbatch" } },
+                            }
+                        },
+                        Owner = new Owner()
+                        {
+                            FirstName = "Sabrina",
+                            LastName = "Psychic",
+                            Gym = "Saffron Gym",
+                            Country = new Country()
+                            {
+                                Name = "Kanto"
                             }
                         }
                     }
