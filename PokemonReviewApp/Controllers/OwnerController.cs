@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using PokemonReviewApp.Dtos;
 using PokemonReviewApp.Interfaces;
 using PokemonReviewApp.Models;
-using PokemonReviewApp.Repository;
 
 namespace PokemonReviewApp.Controllers
 {
@@ -61,7 +60,6 @@ namespace PokemonReviewApp.Controllers
             return Ok(owner);
         }
 
-
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -94,6 +92,35 @@ namespace PokemonReviewApp.Controllers
             }
 
             return Ok("Successfully created");
+        }
+
+        [HttpPut("{ownerId}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public IActionResult UpdateOwner(int ownerId, [FromBody] OwnerDto updatedOwner)
+        {
+            if (updatedOwner == null)
+                return BadRequest(ModelState);
+
+            if (ownerId != updatedOwner.Id)
+                return BadRequest(ModelState);
+
+            if (!_ownerRepository.OwnerExists(ownerId))
+                return NotFound();
+
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var ownerMap = _mapper.Map<Owner>(updatedOwner);
+
+            if (!_ownerRepository.UpdateOwner(ownerMap))
+            {
+                ModelState.AddModelError("", "Something went wrong updating owner");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
         }
     }
 }
